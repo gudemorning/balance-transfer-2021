@@ -4,17 +4,28 @@
 
 window.addEventListener("load",  listenForEvents, false);
 
-// Point HTML input fields to JavaScript variables
+// Conntect HTML elements to JavaScript variables
+
+// HTML input fields
 
 var inputBalance = document.getElementById("balance");
 var inputRate = document.getElementById("rate");
 var inputButton = document.getElementById("input-calculate");
+
+// Actual fee
+
 var spanOrigBalance = document.getElementById("result-div-balance");
-var spanMaxBalance = document.getElementById("result-div-best");
-var spanOneRate = document.getElementById("one-rate");
-var spanTwoRate = document.getElementById("two-rate");
+var spanOneRate = document.getElementById("one-rate"); // Fee %
 var spanOneFee = document.getElementById("one-fee");
+
+// Maximum fee
+
+var spanMaxBalance = document.getElementById("result-div-best");
+var spanTwoRate = document.getElementById("two-rate");
 var spanTwoFee = document.getElementById("two-fee");
+
+// unused
+
 var spanSavings = document.getElementById("result-div-savings");
 
 // Call this function when the web page fully loads.
