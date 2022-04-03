@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<link rel="stylesheet" href="css/layout-page.css">
+		<link rel="stylesheet" href="css/layout-form.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<!--<link rel="stylesheet" href="css/debug.css">-->
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145383681-4"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-145383681-4');
+		</script>
+		<title>Balance transfer maximizer</title>
+		<meta name="description" content="Calculate your balance transfer fee and see if you can transfer a little more.">
+  	</head>
+	
+  	<body>
+		<div class="wrapper">
+			<header>
+			</header>
+		
+			<section id="top" class="background">
+				<h1>Balance transfer maximizer</h1>
+				<p>Calculate your balance transfer fee and see if you can transfer a little more.</p>
+				
+				<form id="form" action="/" method="GET">
+						
+					<label id="label-balance" for="balance">Transfer amount:</label>
+
+					<div id="input-balance">
+						$ <input id="balance" name="balance" value="1000.50" type="number" step="0.01" min="0" required>
+					</div>
+
+					<label id="label-rate" for="rate">Fee percentage:</label>
+
+					<div id="input-rate">
+						<input id="rate" name="rate" value="1" type="number" step="0.01" min="0" required>
+						<span id="percent">%</span>
+					</div>
+					
+					<div id="nothing"></div>
+					
+					<input id="input-calculate" type="button" value="Calculate" />
+				</form>
+			</section>
+
+      <section id="results-columns" class="background">
+        
+        <table>
+          <thead>
+            <th>Min</th>
+            <th>Original</th>
+            <th>Max</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Balance tranfer</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Fee $</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </section>
+			
+			<section id="results" class="background">
+				<h2>Results</h2>
+				
+				<strong id="th-balance">Balance transfer</strong>
+				<strong id="th-rate">Fee %</strong>
+				<strong id="th-fee">Fee $</strong>
+				
+				<div id="result-div-balance" class="right">
+				</div>
+				<div id="result-div-rate-one" class="right">
+					<span id="one-rate"></span>%
+				</div>
+				<div id="result-div-fee-one">
+					$<span id="one-fee"></span>
+				</div>
+				
+				<div id="result-div-best"  class="bold blue"></div>
+				<div id="result-div-rate-two">
+					<span id="two-rate"></span>%
+				</div>
+				<div id="result-div-fee-two">
+					$<span id="two-fee"></span>
+				</div>
+			</section>
+
+			<footer class="main-footer">
+				<ul>
+					<li>&#169; 2019 balancetransfer.best</li>
+				</ul>
+			</footer>
+		</div>
+		<script src="https://openexchangerates.github.io/accounting.js/accounting.min.js"></script>
+  		<script src="js/calculator.js"></script>
+	</body>
+</html>
